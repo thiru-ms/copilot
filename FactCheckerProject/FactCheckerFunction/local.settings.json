@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AZURE_OPENAI_ENDPOINT":"https://tsriniv-dev-aif.cognitiveservices.azure.com/openai/responses?api-version=2025-04-01-preview",
+    "AZURE_OPENAI_KEY":"CxHW3LO3PLj2r5iBquqMcQDA5BHixhzqtJTbF8mPU86FbAy0FsnvJQQJ99BKACYeBjFXJ3w3AAAAACOGpZCW",
+    "AZURE_OPENAI_DEPLOYMENT":"gpt-5-mini",
+    "GUARDIAN_API_KEY":"ab88f1ea-f47e-4289-a1ae-33df27c6cb5c",
+    "NEWSAPI_KEY":"3231018d288d47cc8fe27d4253172ea2"
+  }
+}
