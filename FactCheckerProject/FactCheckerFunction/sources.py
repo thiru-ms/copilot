@@ -3,9 +3,7 @@ import os, re, requests
 GUARDIAN_KEY = os.getenv("GUARDIAN_API_KEY")
 NEWS_KEY = os.getenv("NEWSAPI_KEY")
 
-TRUSTED = {"apnews.com","reuters.com","bbc.co.uk","bbc.com",
-           "thehindu.com","indianexpress.com","hindustantimes.com",
-           "theguardian.com","nytimes.com"}
+TRUSTED = {"indiatimes.com"}
 
 def _domain(u): return re.sub(r"^https?://(www\.)?","",u or "").split("/")[0].lower()
 def _trusted(u): 
@@ -57,7 +55,8 @@ def fetch_newsapi(q, frm=None, to=None, page_size=20, language="en"):
 
 def search_all(q, frm=None, to=None, limit=12):
     seen=set(); merged=[]
-    for a in (fetch_guardian(q, frm, to, min(10,limit)) + fetch_newsapi(q, frm, to, min(20,limit*2))):
+    #for a in (fetch_guardian(q, frm, to, min(10,limit)) + fetch_newsapi(q, frm, to, min(20,limit*2))):
+    for a in (fetch_guardian(q, frm, to, min(10,limit))):
         u=a.get("url"); 
         if not u or u in seen: continue
         seen.add(u); merged.append(a)

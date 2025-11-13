@@ -3,4 +3,8 @@
 # azure-monitor-opentelemetry
 
 azure-functions
+openai
 requests
+azure-ai-projects==1.0.0
+azure.ai.agents
+azure.identity
